@@ -1,0 +1,604 @@
+/* Loading With Changing Styles */
+
+.Loading {
+  width: 100%;
+  margin: auto;
+  min-height: 100vh;
+
+  background: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes backgroundd {
+  from {
+    background: black;
+  }
+  to {
+    background: white;
+  }
+}
+
+.Loading-black {
+  width: 100%;
+  margin: auto;
+  min-height: 100vh;
+
+  background: black;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes toBlack {
+  from {
+    background: white;
+  }
+  to {
+    background: black;
+  }
+}
+
+.Loading img,
+.Loading-black img {
+  width: 40%;
+  animation: levitating 2.5s ease-in-out infinite;
+}
+
+@keyframes levitating {
+  0% {
+    transform: translateY(-25px);
+  }
+  50% {
+    transform: translateY(25px);
+  }
+  100% {
+    transform: translateY(-25px);
+  }
+}
+
+/* The Cards */
+
+.Cards-container {
+  animation-name: backgroundd;
+  animation-duration: 0.6s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+
+  min-height: 100vh;
+
+  padding-top: 20rem;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  overflow: hidden;
+}
+
+.Cards-container_black {
+  animation-name: toBlack;
+  animation-duration: 0.6s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+
+  min-height: 100vh;
+
+  padding-top: 20rem;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  overflow: hidden;
+}
+
+.Cards-container_character {
+  min-height: 48vh;
+  width: 45%;
+
+  font-family: "Overpass", sans-serif;
+  box-shadow: 1px 1px 15px #4dff35;
+  border-radius: 1rem;
+
+  overflow: hidden;
+  margin: 3rem 1rem;
+
+  display: flex;
+}
+
+.Character-img {
+  flex: 1;
+}
+
+.Character-inf {
+  color: black;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  flex: 1;
+}
+
+.Character-inf_black {
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  flex: 1;
+}
+
+.Character-inf_text,
+.Character-inf_text2,
+.Character-inf_text3,
+.Character-inf_title {
+  padding: 1rem 2.5rem;
+}
+
+.Character-inf_title {
+  font-size: 2.7rem;
+}
+
+.Character-inf_text,
+.Character-inf_text2 {
+  font-size: 1.8rem;
+}
+
+.Character-inf_text3 {
+  font-size: 2rem;
+  color: rgb(148, 34, 255);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.Status-alive {
+  color: rgb(38, 255, 74);
+}
+
+.Status-dead {
+  color: rgb(255, 89, 38);
+}
+
+/* More Data's Button */
+
+.More {
+  width: 80%;
+  height: 10vh;
+  margin: 2rem 0rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.More-button {
+  width: 100%;
+  height: 100%;
+  color: white;
+
+  font-size: 3rem;
+  border-radius: 10px;
+  font-weight: bold;
+  font-family: "Overpass", sans-serif;
+
+  cursor: pointer;
+  background: rgb(34, 255, 82);
+
+  border: none;
+  outline: none;
+
+  transition: 0.3s ease;
+}
+
+.More-button:hover {
+  transform: scale(1.1);
+}
+
+/* Modal Window */
+
+.Modal {
+  animation: background-window 0.8s ease forwards;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes background-window {
+  from {
+    background: rgba(255, 255, 255);
+  }
+  to {
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.No-Modal {
+  display: none;
+}
+
+.Modal-container {
+  width: 550px;
+  background: white;
+
+  font-family: "Overpass", sans-serif;
+  color: black;
+
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+  animation: Show 1s forwards;
+}
+
+.Modal-container h2 {
+  font-size: 3rem;
+  padding: 2.5rem 2rem 1.5rem 2rem;
+}
+
+.Modal-container div {
+  width: 240px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+
+  margin: 2.5rem 0rem 3rem 0rem;
+}
+
+.Modal-container span:nth-child(1) {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 0.6rem 2.8rem;
+  color: white;
+
+  border-radius: 5px;
+  cursor: pointer;
+  background: rgb(2, 255, 65);
+
+  transform: scale(0.9);
+
+  transition: 0.5s ease;
+}
+
+.Modal-container span:nth-child(2) {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 0.6rem 2.8rem;
+  color: white;
+
+  border-radius: 5px;
+  cursor: pointer;
+  background: rgb(255, 53, 2);
+
+  transform: scale(0.9);
+
+  transition: 0.5s ease;
+}
+
+.Modal-container span:hover {
+  transform: scale(1.1);
+}
+
+@keyframes Show {
+  0% {
+    transform: translateY(-3000px);
+  }
+  40% {
+    transform: translateY(25px);
+  }
+  80% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+
+.No-Modal-container {
+  display: none;
+}
+
+/* Responsive Design - Cards */
+
+@media screen and (max-width: 1150px) {
+  .Character-inf_title {
+    font-size: 2.5rem;
+  }
+
+  .Character-inf_text,
+  .Character-inf_text2 {
+    font-size: 1.6rem;
+  }
+
+  .Character-inf_text3 {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .Cards-container {
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+  }
+
+  .Cards-container_black {
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+  }
+
+  .Cards-container_character {
+    width: 55%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .Cards-container_character {
+    width: 70%;
+  }
+  .Character-inf_title {
+    font-size: 2.3rem;
+  }
+
+  .Character-inf_text3 {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .Cards-container_character {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .Cards-container_character {
+    width: 85%;
+  }
+  .Character-inf_title {
+    font-size: 2.1rem;
+  }
+
+  .Character-inf_text,
+  .Character-inf_text2 {
+    font-size: 1.5rem;
+  }
+
+  .Character-inf_text3 {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .Cards-container_character {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .Cards-container_character {
+    width: 95%;
+  }
+  .Character-inf_title {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 345px) {
+  .Character-inf_title {
+    font-size: 1.9rem;
+  }
+
+  .Character-inf_text,
+  .Character-inf_text2 {
+    font-size: 1.4rem;
+  }
+
+  .Character-inf_text3 {
+    font-size: 1.5rem;
+  }
+
+  .Character-inf_text,
+  .Character-inf_text2,
+  .Character-inf_text3,
+  .Character-inf_title {
+    padding: 1rem 1.8rem;
+  }
+}
+
+/* Responsive - Design - Modal Window */
+
+@media screen and (max-width: 700px) {
+  .Modal-container {
+    width: 520px;
+  }
+
+  .Modal-container h2 {
+    font-size: 2.8rem;
+  }
+
+  .Modal-container span:nth-child(1) {
+    font-size: 1.8rem;
+  }
+
+  .Modal-container span:nth-child(2) {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .Modal-container {
+    width: 470px;
+  }
+
+  .Modal-container div {
+    margin: 2.5rem 0rem 3.5rem 0rem;
+  }
+
+  .Modal-container h2 {
+    font-size: 2.7rem;
+    padding: 3rem 2rem 1.5rem 2rem;
+  }
+
+  .Modal-container span:nth-child(1) {
+    font-size: 1.7rem;
+  }
+
+  .Modal-container span:nth-child(2) {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .Modal-container {
+    width: 420px;
+  }
+
+  .Modal-container div {
+    margin: 2.4rem 0rem 3.5rem 0rem;
+  }
+
+  .Modal-container h2 {
+    font-size: 2.5rem;
+    padding: 3rem 2rem 1.5rem 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .Modal-container {
+    width: 380px;
+  }
+
+  .Modal-container div {
+    margin: 2.4rem 0rem 3.5rem 0rem;
+  }
+
+  .Modal-container h2 {
+    font-size: 2.3rem;
+    padding: 3rem 2rem 1.5rem 2rem;
+  }
+
+  .Modal-container span:nth-child(1) {
+    font-size: 1.6rem;
+  }
+
+  .Modal-container span:nth-child(2) {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .Modal-container {
+    width: 340px;
+  }
+
+  .Modal-container div {
+    width: 215px;
+    margin: 2.4rem 0rem 3.5rem 0rem;
+  }
+
+  .Modal-container h2 {
+    font-size: 2.1rem;
+    padding: 3rem 2rem 1.5rem 2rem;
+  }
+
+  .Modal-container span:nth-child(1) {
+    font-size: 1.5rem;
+  }
+
+  .Modal-container span:nth-child(2) {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .Modal-container {
+    width: 300px;
+  }
+
+  .Modal-container div {
+    width: 190px;
+    margin: 2.4rem 0rem 3.5rem 0rem;
+  }
+
+  .Modal-container h2 {
+    font-size: 1.8rem;
+    padding: 3rem 2rem 1.5rem 2rem;
+  }
+
+  .Modal-container span:nth-child(1) {
+    font-size: 1.4rem;
+  }
+
+  .Modal-container span:nth-child(2) {
+    font-size: 1.4rem;
+  }
+}
+
+/* Responsive Design - Loading */
+
+@media screen and (max-width: 850px) {
+  .Loading img,
+  .Loading-black img {
+    width: 55%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Loading img,
+  .Loading-black img {
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .Loading img,
+  .Loading-black img {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .Loading img,
+  .Loading-black img {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .Loading img,
+  .Loading-black img {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .Loading img,
+  .Loading-black img {
+    width: 97%;
+  }
+}

@@ -1,0 +1,130 @@
+/* Favorites toggle */
+
+.container {
+  width: 95%;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 5rem;
+}
+
+.container-title {
+  width: 16%;
+
+  font-size: 3.5rem;
+  color: black;
+  font-family: "Overpass", sans-serif;
+
+  cursor: pointer;
+}
+
+.container-title_black {
+  width: 16%;
+
+  font-size: 3.5rem;
+  color: white;
+  font-family: "Overpass", sans-serif;
+
+  cursor: pointer;
+}
+
+/* Showing Favorites Characters */
+
+.Favorites {
+  display: none;
+}
+
+.Favorites-toggle {
+  width: 100%;
+
+  box-shadow: 0.8px 0.8px 15px rgba(255, 255, 255);
+
+  min-height: 0vh;
+
+  margin-bottom: 13rem;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  overflow: hidden;
+}
+
+/* Responsive Design */
+
+@media screen and (max-width: 1270px) {
+  .container-title_black,
+  .container-title {
+    width: 20%;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .container-title_black,
+  .container-title {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .container-title_black,
+  .container-title {
+    width: 30%;
+    font-size: 3.2rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container-title_black,
+  .container-title {
+    width: 35%;
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .container-title_black,
+  .container-title {
+    font-size: 2.8rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container-title_black,
+  .container-title {
+    font-size: 2.6rem;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .container-title_black,
+  .container-title {
+    width: 38%;
+    font-size: 2.6rem;
+  }
+}
+
+@media screen and (max-width: 402px) {
+  .container-title_black,
+  .container-title {
+    width: 40%;
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .container-title_black,
+  .container-title {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .container-title_black,
+  .container-title {
+    width: 50%;
+  }
+}
